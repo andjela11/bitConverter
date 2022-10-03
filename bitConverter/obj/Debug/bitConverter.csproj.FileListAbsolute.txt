@@ -1,0 +1,10 @@
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\bin\Debug\bitConverter.exe.config
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\bin\Debug\bitConverter.exe
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\bin\Debug\bitConverter.pdb
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.csproj.AssemblyReference.cache
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.Form1.resources
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.Properties.Resources.resources
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.csproj.GenerateResource.cache
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.csproj.CoreCompileInputs.cache
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.exe
+D:\Andjela\FAKS\neki projekti\bitConverter\bitConverter\bitConverter\obj\Debug\bitConverter.pdb
