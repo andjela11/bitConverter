@@ -111,10 +111,10 @@ namespace bitConverter
                 s = "";
                 count = firstBin.Length;
                 c = count - secondBin.Length;
-                while (count != c)
+                while (c > 0) 
                 {
                     s += "0";
-                    c++;
+                    c--;
                 }
                 s += secondBin;
 
@@ -126,10 +126,10 @@ namespace bitConverter
                 s = "";
                 count = secondBin.Length;
                 c = count - firstBin.Length;
-                while (count != c)
+                while (c > 0)
                 {
                     s += "0";
-                    c++;
+                    c--;
                 }
                 s += firstBin;
 
@@ -165,6 +165,7 @@ namespace bitConverter
                     rez += "0";
                     c--;
                 }
+                
                 rez += f;
                 f = rez;
             }
