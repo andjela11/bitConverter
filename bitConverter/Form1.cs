@@ -60,22 +60,24 @@ namespace bitConverter
 
         private decimal ConvertOct(decimal num) //10 i 8
         {
-            decimal res = 0, ost, r = 1, osn = 8;
+            int res = 0, ost, r = 1, osn = 8;
 
-            if (num >= 0 || num <= 7)
+            int n = Decimal.ToInt32(num);
+
+            if (num >= 0 && num <= 7)
                 return num;
             else
             {
 
                 do
                 {
-                    ost = num % osn; //ost = 2 
-                    num /= osn; //num = 1
+                    ost = n % osn; //ost = 2 
+                    n /= osn; //num = 1
                     res += r * ost;
                     r *= 10;
 
                 }
-                while (num != 0);
+                while (n != 0);
 
             }
             return res;
@@ -99,9 +101,47 @@ namespace bitConverter
             label3.Text = numCalc1.Value.ToString();
             label4.Text = numCalc2.Value.ToString();
             int br1 = Decimal.ToInt32(numCalc1.Value), br2 = Decimal.ToInt32(numCalc2.Value);
+            int count, c;
+            string firstBin, secondBin, f, s; 
+            firstBin = ConvertBin(numCalc1.Value).ToString();
+            secondBin = ConvertBin(numCalc2.Value).ToString();
 
-            txtCalcFirst.Text = ConvertBin(numCalc1.Value).ToString();
-            txtCalcSecond.Text = ConvertBin(numCalc2.Value).ToString();
+            if (firstBin.Length > secondBin.Length)
+            {
+                s = "";
+                count = firstBin.Length;
+                c = count - secondBin.Length;
+                while (count != c)
+                {
+                    s += "0";
+                    c++;
+                }
+                s += secondBin;
+
+                txtCalcFirst.Text = firstBin;
+                txtCalcSecond.Text = s;
+            }
+            else if (firstBin.Length < secondBin.Length)
+            {
+                s = "";
+                count = secondBin.Length;
+                c = count - firstBin.Length;
+                while (count != c)
+                {
+                    s += "0";
+                    c++;
+                }
+                s += firstBin;
+
+                txtCalcFirst.Text = s;
+                txtCalcSecond.Text = secondBin;
+            }
+            else
+            {
+                count = secondBin.Length;
+                txtCalcFirst.Text = firstBin;
+                txtCalcSecond.Text = secondBin;
+            }
 
             int r = 0;
             if (radioBtnAND.Checked)
@@ -113,9 +153,23 @@ namespace bitConverter
             else
                 label2.Text = "Izaberi operaciju";
 
+            string rez = "";
             label5.Text = r.ToString();
-            txtResult.Text = ConvertBin(r).ToString();
-
+            f =  ConvertBin(r).ToString();
+            
+            if(f.Length < count)
+            {
+                c = count - f.Length;
+                while(c > 0)
+                {
+                    rez += "0";
+                    c--;
+                }
+                rez += f;
+                f = rez;
+            }
+            
+            txtResult.Text = f;
         }
 
         private int Calc(int br1, int br2, char op)
